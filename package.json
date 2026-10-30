@@ -1,0 +1,50 @@
+{
+  "name": "opencode-oracle",
+  "version": "0.1.0",
+  "description": "OpenCode v2 plugin that adds an `oracle_advice` tool so a model can consult a stronger, more expensive model for advice.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Alberto Ruiz <me@albruiz.dev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Az107/opencode-oracle.git"
+  },
+  "homepage": "https://github.com/Az107/opencode-oracle#readme",
+  "bugs": {
+    "url": "https://github.com/Az107/opencode-oracle/issues"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "packageManager": "bun@1.4.2",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "oracle",
+    "advice"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "check": "bun run typecheck && bun test"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.0.30"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.2"
+  }
+}

@@ -206,3 +206,10 @@ The code is split by concern:
 - `src/oracle.ts` — text-mode and session-mode execution
 - `src/tools.ts` — tool definitions and handlers
 - `src/index.ts` — plugin entrypoint
+
+## Releasing
+
+Pushing a `v*` tag runs the release workflow. It verifies that the tag matches
+`version` in `package.json`, runs typecheck and tests, creates a GitHub release,
+and publishes to npm only when the `NPM_TOKEN` repository secret is set. The
+package has not been published to npm yet.

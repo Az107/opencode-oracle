@@ -36,7 +36,7 @@
 ## CI and releases
 
 - `.github/workflows/ci.yml` runs install, typecheck, and tests on pushes to `main` and on pull requests.
-- `.github/workflows/release.yml` runs on `v*` tags: verifies the package, publishes to npm only when the `NPM_TOKEN` secret exists, then creates a GitHub release. Do not push a tag unless a release is intended.
+- `.github/workflows/release.yml` runs on `v*` tags: verifies the tag matches the package version, typechecks and tests, publishes to npm only when the `NPM_TOKEN` secret exists, then creates a GitHub release. Do not push a tag unless a release is intended.
 - Keep the Bun version in both workflows in sync with `packageManager` in `package.json`.
 
 ## Docs
